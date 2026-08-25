@@ -22,7 +22,7 @@ except Exception as e:
     print(f"AVERTISSEMENT : modele introuvable — {e}")
 
 # Seuil optimise via courbe ROC (Youden Index)
-SEUIL_OPTIMAL = 0.635
+SEUIL_OPTIMAL = 0.50
 
 app = FastAPI(
     title="API Classification RX Thorax - Pneumonie",
