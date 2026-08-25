@@ -64,11 +64,13 @@ async def predire_pneumonie(file: UploadFile = File(...)):
         )
 
     # Lecture et preprocessing de l'image
-    contenu = await file.read()
     image = Image.open(io.BytesIO(contenu)).convert("RGB")
     image = image.resize((224, 224))
-    image_array = np.array(image) / 255.0
-    image_array = np.expand_dims(image_array, axis=0)
+    image_array = np.array(image, dtype=np.float32)
+    image_array = tf.keras.applications.efficientnet.preprocess_input(
+    image_array
+)
+image_array = np.expand_dims(image_array, axis=0)
 
     # Inference
     proba = float(modele.predict(image_array, verbose=0)[0][0])
