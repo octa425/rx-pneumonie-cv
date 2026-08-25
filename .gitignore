@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+*.keras
+*.h5
+*.pkl
+*.zip
+chest_xray/
+checkpoints/
