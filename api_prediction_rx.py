@@ -25,7 +25,7 @@ except Exception as e:
 SEUIL_OPTIMAL = 0.635
 
 app = FastAPI(
-    title="API Classification RX Thorax — Pneumonie",
+    title="API Classification RX Thorax - Pneumonie",
     description="Classifie une radiographie thoracique : NORMAL ou PNEUMONIE",
     version="1.0.0"
 )
