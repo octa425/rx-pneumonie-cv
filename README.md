@@ -11,7 +11,7 @@ NORMAL vs PNEUMONIE.
 
 ## Dataset
 
-Chest X-Ray Images (Pneumonia) — Kaggle
+Chest X-Ray Images (Pneumonia): Kaggle
 
 5 863 images RX thorax :
 
